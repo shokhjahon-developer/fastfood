@@ -1,15 +1,13 @@
-const { port } = require("../../config");
+const { port, mongoUri } = require("../../config");
 const { connect } = require("mongoose");
 
 const runner = (app) => {
   const bootsrap = async () => {
     try {
-      await connect("mongodb://localhost:27017/efastFood").then(() =>
-        console.log("connected to database")
-      );
+      await connect(mongoUri).then(() => console.log("connected to database"));
 
       app.listen(port, () => {
-        console.log(`server start on http://localhost:${port}`);
+        console.log(`This server is running on port ${port}`);
       });
     } catch (error) {
       console.log(error);
