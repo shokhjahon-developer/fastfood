@@ -6,7 +6,7 @@ const runner = (app) => {
     try {
       await connect("mongodb+srv://shokhjahonshomirzayev759:idng48lCxCuwYGSo@cluster0.jikwpyp.mongodb.net/fastfood").then(() => console.log("connected to database"));
 
-      app.listen(port, () => {
+      app.listen(port, '0.0.0.0' , () => {
         console.log(`This server is running on port ${port}`);
       });
     } catch (error) {
