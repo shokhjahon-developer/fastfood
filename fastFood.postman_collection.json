@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "c797834f-12d4-4c68-8340-3a1aa48f5ea6",
+		"name": "fastFood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34602501"
+	},
+	"item": [
+		{
+			"name": "login/register(admin)",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"Your Name\",\r\n    \"username\": \"YourUsername\",\r\n    \"password\": \"YOur password\",\r\n    \"code\": \"nUkle7l2t@o\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9637/api/admin/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"YourUsername\",\r\n    \"password\": \"YOur password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9637/api/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTA0OWJhNzc2YjA2MDcwZmFiYTllMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMDczMjEwMiwiZXhwIjoxNzIwNzM5MzAyfQ.VH549Pz4vIvaC2zdqiet74oxWegeSGBiyrSwU-UGPAY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "burgers",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Saved Pictures/dd99a0aafb044eb5e84a026b617feaef.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9637/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTA0OWJhNzc2YjA2MDcwZmFiYTllMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMDczMjEwMiwiZXhwIjoxNzIwNzM5MzAyfQ.VH549Pz4vIvaC2zdqiet74oxWegeSGBiyrSwU-UGPAY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "burger",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Saved Pictures/dd99a0aafb044eb5e84a026b617feaef.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9637/api/category/66904f9436892f1b6324785a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"category",
+								"66904f9436892f1b6324785a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTA0OWJhNzc2YjA2MDcwZmFiYTllMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMDczMjEwMiwiZXhwIjoxNzIwNzM5MzAyfQ.VH549Pz4vIvaC2zdqiet74oxWegeSGBiyrSwU-UGPAY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9637/api/category/66904f9436892f1b6324785a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"category",
+								"66904f9436892f1b6324785a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTA0OWJhNzc2YjA2MDcwZmFiYTllMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMDczMjEwMiwiZXhwIjoxNzIwNzM5MzAyfQ.VH549Pz4vIvaC2zdqiet74oxWegeSGBiyrSwU-UGPAY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": " BIg Burger",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "66904f9e36892f1b6324785c",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "35 000 sum",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Saved Pictures/dd99a0aafb044eb5e84a026b617feaef.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9637/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTA0OWJhNzc2YjA2MDcwZmFiYTllMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMDczMjEwMiwiZXhwIjoxNzIwNzM5MzAyfQ.VH549Pz4vIvaC2zdqiet74oxWegeSGBiyrSwU-UGPAY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "lavash",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "66904f9e36892f1b6324785c",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "27000 sum",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Saved Pictures/dd99a0aafb044eb5e84a026b617feaef.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9637/api/products/669051f32c2bc9800a711922",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9637",
+							"path": [
+								"api",
+								"products",
+								"669051f32c2bc9800a711922"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
